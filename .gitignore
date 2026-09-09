@@ -1,9 +1,29 @@
+# Virtual environment
+.venv/
 venv/
+env/
+
+# Python
 __pycache__/
-*.pyc
-
-output/images/
-output/*.json
-output/*.md
-
+*.py[cod]
+*.egg-info/
+.pytest_cache/
 .cache/
+
+# Pipeline runtime data (uploaded documents and extracted results may contain
+# personal or confidential information - keep them out of version control)
+storage/
+output/
+results/
+
+# Sample inputs stay tracked, real documents do not
+*.pdf
+!input/sample.pdf
+
+# Intermediate page renders
+page_*.png
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
